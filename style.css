@@ -18,7 +18,7 @@
     }
 
     .btn-primary {
-        @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 relative overflow-hidden;
+        @apply bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 relative overflow-hidden;
         box-shadow: 0 0 15px theme('colors.cyan.500'), 0 0 30px theme('colors.blue.600');
     }
     .btn-primary:hover {
@@ -26,7 +26,11 @@
     }
 
     .btn-secondary {
-        @apply bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition-all duration-300 transform hover:scale-105;
+        @apply bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 relative overflow-hidden;
+        box-shadow: 0 0 15px theme('colors.purple.500'), 0 0 30px theme('colors.indigo.600');
+    }
+    .btn-secondary:hover {
+        box-shadow: 0 0 25px theme('colors.purple.400'), 0 0 50px theme('colors.indigo.500');
     }
     
     .btn-secondary-purple {
@@ -38,7 +42,11 @@
     }
 
     .section-title {
-        @apply text-4xl md:text-5xl font-black text-white leading-tight;
+        @apply text-4xl md:text-5xl font-black leading-tight;
+    }
+    
+    .gradient-text {
+        @apply bg-gradient-to-r from-cyan-300 via-purple-400 to-orange-400 bg-clip-text text-transparent;
     }
 
     .feature-card {
