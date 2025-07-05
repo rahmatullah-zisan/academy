@@ -3,70 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zisan's Code Wizards Academy | Coding for Kids in Bangladesh</title>
-    
+    <title>Code Wizards Academy | Learn Coding, Build The Future</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    
-
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-inter bg-brand-bg text-brand-text">
+<body class="bg-[#111827] text-[#D1D5DB] font-inter">
 
     <!-- 
       ======================================
       HEADER & NAVIGATION BAR
       ======================================
     -->
-    <header id="header" class="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
+    <header id="header" class="bg-[#111827]/80 backdrop-blur-lg sticky top-0 z-50 shadow-cyan-500/10 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a href="#home" class="flex items-center space-x-2 text-2xl font-bold text-blue-600">
-                    <i class="fa-solid fa-wand-magic-sparkles text-green-500"></i>
-                    <span>Zisan's Code Wizards</span>
+                <a href="#home" class="flex items-center space-x-2 text-2xl font-extrabold text-white">
+                    <span class="text-cyan-400 glowing-text">&lt;/&gt;</span>
+                    <span>Code Wizards</span>
                 </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-green-500 transition-colors duration-300">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-green-500 transition-colors duration-300">About</a>
-                    <a href="#courses" class="text-gray-600 hover:text-green-500 transition-colors duration-300">Courses</a>
-                    <a href="#why-us" class="text-gray-600 hover:text-green-500 transition-colors duration-300">Why Us?</a>
-                    <a href="#showcase" class="text-gray-600 hover:text-green-500 transition-colors duration-300">Showcase</a>
-                    <a href="#contact" class="text-gray-600 hover:text-green-500 transition-colors duration-300">Contact</a>
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#courses" class="nav-link">Courses</a>
+                    <a href="#success" class="nav-link">Success Stories</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </nav>
 
-                <!-- CTA Button, Dark Mode Toggle & Mobile Menu Toggle -->
+                <!-- CTA Button & Mobile Menu Toggle -->
                 <div class="flex items-center space-x-4">
-                     <a href="#contact" class="hidden sm:inline-block bg-green-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition-transform duration-300 hover:scale-105 shadow-lg">Enroll Now</a>
-                     <button id="theme-toggle" class="text-blue-600 text-xl">
-                        <i class="fa-solid fa-sun"></i>
-                     </button>
-                     <button id="mobile-menu-button" class="md:hidden text-blue-600 text-2xl">
-                        <i class="fa-solid fa-bars"></i>
+                     <a href="#contact" class="hidden sm:inline-block btn-primary">Enroll Now</a>
+                     <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </div>
             
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-600 hover:text-white rounded">Home</a>
-                <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-600 hover:text-white rounded">About</a>
-                <a href="#courses" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-600 hover:text-white rounded">Courses</a>
-                <a href="#why-us" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-600 hover:text-white rounded">Why Us?</a>
-                <a href="#showcase" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-600 hover:text-white rounded">Showcase</a>
-                <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-600 hover:text-white rounded">Contact</a>
-                <a href="#contact" class="block mt-2 w-full text-center bg-green-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition-transform duration-300 hover:scale-105 shadow-lg">Enroll Now</a>
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#courses" class="mobile-nav-link">Courses</a>
+                <a href="#success" class="mobile-nav-link">Success Stories</a>
+                <a href="#about" class="mobile-nav-link">About Us</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <a href="#contact" class="block mt-2 w-full text-center btn-primary">Enroll Now</a>
             </div>
         </div>
     </header>
@@ -77,73 +68,80 @@
           HERO SECTION
           ======================================
         -->
-        <section id="home" class="hero-bg text-white">
-            <div class="bg-black/50 min-h-[calc(100vh-76px)] flex items-center justify-center">
-                <div class="container mx-auto px-6 text-center">
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Unlock Your Child's Inner Tech Genius.</h1>
-                    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
-                        Fun, project-based coding classes in Bangladesh for students aged 7-18. From building games to creating websites, we make learning to code a magical adventure.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#courses" class="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform duration-300 hover:scale-105 shadow-xl">Explore Our Courses</a>
-                        <a href="#contact" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-600 transition-all duration-300">Book a FREE Trial Class</a>
+        <section id="home" class="relative text-white py-24 md:py-32 text-center">
+            <div class="container mx-auto px-6 z-10">
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4 animate-fade-in-down">Learn Coding, Build The Future.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300 animate-fade-in-up">
+                    Project-based, fun coding courses at Code Wizards Academy for primary and high school students. Become a tech superstar by building games, websites, and apps!
+                </p>
+                
+                <!-- Social Proof Bar -->
+                <div class="flex justify-center items-center space-x-8 md:space-x-16 mb-10 animate-fade-in">
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-cyan-400">50+</p>
+                        <p class="text-gray-400">Happy Students</p>
                     </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-cyan-400">25+</p>
+                        <p class="text-gray-400">Projects Launched</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-cyan-400">5-Star</p>
+                        <p class="text-gray-400">Parent Rating</p>
+                    </div>
+                </div>
+
+                <!-- Video Placeholder -->
+                <div id="video-thumbnail" class="relative max-w-4xl mx-auto mb-10 rounded-xl shadow-2xl shadow-cyan-500/20 cursor-pointer group animate-fade-in-zoom">
+                    <img src="https://placehold.co/1280x720/111827/22D3EE?text=Excited+Kids+Coding" alt="Promo Video Thumbnail" class="rounded-xl w-full">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center rounded-xl">
+                        <div class="w-24 h-24 bg-cyan-400/80 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up">
+                    <a href="#courses" class="btn-primary btn-lg">Explore Courses</a>
+                    <a href="#" id="watch-demo-btn" class="btn-secondary btn-lg">Watch a FREE Demo</a>
                 </div>
             </div>
         </section>
 
         <!-- 
           ======================================
-          ABOUT US SECTION
+          WHY CHOOSE US? SECTION
           ======================================
         -->
-        <section id="about" class="py-20">
+        <section id="why-us" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Our Mission: To Inspire the Next Generation of Innovators.</h2>
-                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">We believe in learning through creation, not just theory.</p>
+                    <h2 class="section-title">Why Code Wizards is The Best Choice.</h2>
                 </div>
-                
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/2B3A67/FFFFFF?text=Rahmatullah+Zisan" alt="Founder Rahmatullah Zisan" class="rounded-lg shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="feature-card">
+                        <div class="text-4xl mb-4 text-cyan-400">💻</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Live Project-Based Learning</h3>
+                        <p class="text-gray-400">Learn by doing, not by lecturing. Every student will build their own games and websites.</p>
                     </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">A Note from Our Founder</h3>
-                        <p class="text-gray-700 mb-4">
-                            "Hi, I'm Rahmatullah Zisan. My journey into technology started with a simple spark of curiosity, and it transformed my world. I founded Code Wizards Academy with a simple but powerful belief: every child in Bangladesh deserves the chance to not just use technology, but to become a creator of it."
-                        </p>
-                        <p class="text-gray-700">
-                            "Our goal is to create a fun, supportive space where students can build amazing things, from their first game to their first website. We want to ignite that same spark of passion and show them that with code, they have the power to bring their wildest ideas to life."
-                        </p>
+                    <!-- Feature Card 2 -->
+                    <div class="feature-card">
+                        <div class="text-4xl mb-4 text-cyan-400">👨‍🏫</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Dedicated Support</h3>
+                        <p class="text-gray-400">Our expert instructors provide dedicated support not just during class, but after as well.</p>
                     </div>
-                </div>
-
-                <!-- Instructors Subsection -->
-                <div class="mt-20">
-                    <h3 class="text-3xl font-bold text-blue-600 text-center mb-10">Meet Our Magical Mentors</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Instructor 1 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                            <img src="https://placehold.co/200x200/FF6B00/FFFFFF?text=Mentor" alt="Instructor 1" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-green-500">
-                            <h4 class="text-xl font-bold text-blue-600">Sadia Ahmed</h4>
-                            <p class="text-green-500 font-semibold mb-2">Lead Python Instructor</p>
-                            <p class="text-gray-600 text-sm">A software engineer with a passion for making complex topics simple and fun for young minds.</p>
-                        </div>
-                        <!-- Instructor 2 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                            <img src="https://placehold.co/200x200/2B3A67/FFFFFF?text=Mentor" alt="Instructor 2" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-600">
-                            <h4 class="text-xl font-bold text-blue-600">Imran Khan</h4>
-                            <p class="text-green-500 font-semibold mb-2">Web Development Guru</p>
-                            <p class="text-gray-600 text-sm">Loves building cool websites and helping teenagers launch their first online projects.</p>
-                        </div>
-                        <!-- Instructor 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                            <img src="https://placehold.co/200x200/FF6B00/FFFFFF?text=Mentor" alt="Instructor 3" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-green-500">
-                            <h4 class="text-xl font-bold text-blue-600">Fatima Chowdhury</h4>
-                            <p class="text-green-500 font-semibold mb-2">Junior Wizards Specialist</p>
-                            <p class="text-gray-600 text-sm">An expert in block-based coding who makes every class feel like a creative playground.</p>
-                        </div>
+                    <!-- Feature Card 3 -->
+                    <div class="feature-card">
+                        <div class="text-4xl mb-4 text-cyan-400">👥</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Small Class, Big Attention</h3>
+                        <p class="text-gray-400">We ensure personalized attention for every student with our small batch sizes.</p>
+                    </div>
+                    <!-- Feature Card 4 -->
+                    <div class="feature-card">
+                        <div class="text-4xl mb-4 text-cyan-400">🚀</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Future-Ready Skills</h3>
+                        <p class="text-gray-400">Go beyond coding. Develop the problem-solving and creativity skills needed for tomorrow.</p>
                     </div>
                 </div>
             </div>
@@ -154,51 +152,57 @@
           COURSES SECTION
           ======================================
         -->
-        <section id="courses" class="py-20 bg-white">
+        <section id="courses" class="py-20 bg-[#1F2937]">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-600">A Magical Path for Every Young Coder.</h2>
-                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Choose the adventure that's right for your child.</p>
+                    <h2 class="section-title">The Perfect Coding Path For You.</h2>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <!-- Junior Wizards Card -->
-                    <div class="bg-brand-bg rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Course Card 1: Junior Wizards -->
+                    <div class="course-card">
                         <div class="p-8">
                            <div class="flex items-center gap-4 mb-4">
-                               <i class="fa-solid fa-child-reaching text-4xl text-cyan-500"></i>
+                               <div class="text-5xl">🪄</div>
                                <div>
-                                   <h3 class="text-2xl font-bold text-blue-600">Junior Wizards</h3>
-                                   <p class="font-semibold text-cyan-600">Ages 7-12</p>
+                                   <h3 class="text-3xl font-bold text-white">Junior Wizards</h3>
+                                   <p class="font-semibold text-cyan-400">Ages 7-12</p>
                                </div>
                            </div>
-                            <p class="text-gray-700 mb-6">A playful introduction to the world of coding through visual and block-based programming. Perfect for sparking creativity and logical thinking.</p>
-                            <div class="space-y-3">
-                                <p><i class="fa-solid fa-check-circle text-cyan-500 mr-2"></i> <strong class="font-semibold">Focus:</strong> Visual & Block-Based Coding</p>
-                                <p><i class="fa-solid fa-check-circle text-cyan-500 mr-2"></i> <strong class="font-semibold">Tools:</strong> Scratch, Block-Based Python</p>
-                                <p><i class="fa-solid fa-check-circle text-cyan-500 mr-2"></i> <strong class="font-semibold">Projects:</strong> Animated Stories, Simple Games, Interactive Art</p>
+                            <p class="text-gray-300 mb-6">A playful introduction to the world of coding through visual and block-based programming.</p>
+                            <div class="space-y-3 mb-6">
+                                <p><span class="text-cyan-400 mr-2">▶</span> <strong class="font-semibold text-white">Focus:</strong> Visual & Block-Based Coding (Scratch, Blockly)</p>
+                                <p class="font-semibold text-white mt-4">Projects Showcase:</p>
+                                <ul class="list-disc list-inside text-gray-300">
+                                    <li>Animated Story</li>
+                                    <li>Maze Game</li>
+                                    <li>Music Maker</li>
+                                </ul>
                             </div>
-                            <a href="#contact" class="mt-6 inline-block bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition-colors duration-300">Learn More</a>
+                            <a href="#contact" class="btn-secondary w-full text-center">View Junior Path Details</a>
                         </div>
                     </div>
 
-                    <!-- Teen Titans Card -->
-                    <div class="bg-brand-bg rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Course Card 2: Teen Titans -->
+                    <div class="course-card">
                         <div class="p-8">
                            <div class="flex items-center gap-4 mb-4">
-                               <i class="fa-solid fa-code text-4xl text-indigo-500"></i>
+                               <div class="text-5xl">👨‍💻</div>
                                <div>
-                                   <h3 class="text-2xl font-bold text-blue-600">Teen Titans</h3>
-                                   <p class="font-semibold text-indigo-600">Ages 13-18</p>
+                                   <h3 class="text-3xl font-bold text-white">Teen Titans</h3>
+                                   <p class="font-semibold text-purple-400">Ages 13-18</p>
                                </div>
                            </div>
-                            <p class="text-gray-700 mb-6">Dive into real-world programming languages and build projects that solve actual problems. Ideal for aspiring developers and tech entrepreneurs.</p>
-                            <div class="space-y-3">
-                                <p><i class="fa-solid fa-check-circle text-indigo-500 mr-2"></i> <strong class="font-semibold">Focus:</strong> Real-World Programming</p>
-                                <p><i class="fa-solid fa-check-circle text-indigo-500 mr-2"></i> <strong class="font-semibold">Languages:</strong> Python, HTML/CSS, JavaScript</p>
-                                <p><i class="fa-solid fa-check-circle text-indigo-500 mr-2"></i> <strong class="font-semibold">Projects:</strong> Websites, App Prototypes, Automation Scripts</p>
+                            <p class="text-gray-300 mb-6">Dive into real-world programming languages and build projects that solve actual problems.</p>
+                            <div class="space-y-3 mb-6">
+                                <p><span class="text-purple-400 mr-2">▶</span> <strong class="font-semibold text-white">Focus:</strong> Real-World Programming (Python, HTML/CSS, JavaScript)</p>
+                                <p class="font-semibold text-white mt-4">Projects Showcase:</p>
+                                <ul class="list-disc list-inside text-gray-300">
+                                    <li>Personal Portfolio Website</li>
+                                    <li>Quiz App</li>
+                                    <li>Automation Script</li>
+                                </ul>
                             </div>
-                            <a href="#contact" class="mt-6 inline-block bg-indigo-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-600 transition-colors duration-300">Learn More</a>
+                            <a href="#contact" class="btn-secondary-purple w-full text-center">View Teen Path Details</a>
                         </div>
                     </div>
                 </div>
@@ -207,94 +211,66 @@
 
         <!-- 
           ======================================
-          WHY US? SECTION
+          SUCCESS STORIES SECTION
           ======================================
         -->
-        <section id="why-us" class="py-20">
+        <section id="success" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-600">The 'Code Wizards' Difference.</h2>
-                    <p class="text-lg text-gray-600 mt-4">Why parents and students choose us.</p>
+                    <h2 class="section-title">Our Wizards' Success Stories!</h2>
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="text-center p-6">
-                        <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-blue-600 mb-2">Project-Based Learning</h4>
-                        <p class="text-gray-600">We build, we create, we learn. No boring lectures.</p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div class="text-center p-6">
-                        <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-blue-600 mb-2">Small Class Sizes</h4>
-                        <p class="text-gray-600">Personalized attention for every student.</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="text-center p-6">
-                        <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
-                            <i class="fa-solid fa-user-tie"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-blue-600 mb-2">Expert Instructors</h4>
-                        <p class="text-gray-600">Passionate teachers who are also tech professionals.</p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div class="text-center p-6">
-                        <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-blue-600 mb-2">Fun & Safe Environment</h4>
-                        <p class="text-gray-600">A supportive space to experiment, fail, and grow.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 
-          ======================================
-          STUDENT SHOWCASE SECTION
-          ======================================
-        -->
-        <section id="showcase" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-600">See What Our Wizards Have Built!</h2>
-                    <p class="text-lg text-gray-600 mt-4">Real projects from our talented students.</p>
-                </div>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-brand-bg rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/34D399/FFFFFF?text=Galaxy+Invaders" alt="Galaxy Invaders Game" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                    <!-- Story 1 -->
+                    <div class="success-card">
+                        <img src="https://placehold.co/300x300/22D3EE/111827?text=Ariba" alt="Student Ariba" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h4 class="text-xl font-bold text-blue-600">Galaxy Invaders Game</h4>
-                            <p class="text-gray-600 mb-2">By Amina, Age 11</p>
-                            <span class="inline-block bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Scratch</span>
+                            <p class="text-gray-400 italic mb-4">"I can now build my own games! It's so much fun!"</p>
+                            <h4 class="text-xl font-bold text-white">Ariba, Age 12</h4>
+                            <p class="text-cyan-400 mt-2">Project: Space Adventure Game</p>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="bg-brand-bg rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/60A5FA/FFFFFF?text=My+First+Blog" alt="Personal Blog Website" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                    <!-- Story 2 -->
+                    <div class="success-card">
+                        <img src="https://placehold.co/300x300/C4B5FD/111827?text=Fahim" alt="Student Fahim" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h4 class="text-xl font-bold text-blue-600">Personal Blog Website</h4>
-                            <p class="text-gray-600 mb-2">By Rahim, Age 15</p>
-                            <span class="inline-block bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">HTML</span>
-                            <span class="inline-block bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">CSS</span>
+                            <p class="text-gray-400 italic mb-4">"I created my first website for my school project. My teachers were amazed!"</p>
+                            <h4 class="text-xl font-bold text-white">Fahim, Age 15</h4>
+                            <p class="text-purple-400 mt-2">Project: Personal Portfolio Website</p>
                         </div>
                     </div>
-                    <!-- Project 3 -->
-                    <div class="bg-brand-bg rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/F472B6/FFFFFF?text=Weather+App" alt="Weather App" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                    <!-- Story 3 -->
+                    <div class="success-card">
+                        <img src="https://placehold.co/300x300/FDBA74/111827?text=Sadia" alt="Student Sadia" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h4 class="text-xl font-bold text-blue-600">Weather App</h4>
-                            <p class="text-gray-600 mb-2">By Farhan, Age 17</p>
-                            <span class="inline-block bg-pink-200 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
-                            <span class="inline-block bg-pink-200 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            <p class="text-gray-400 italic mb-4">"Python is my new superpower. I built a script to automate my homework."</p>
+                            <h4 class="text-xl font-bold text-white">Sadia, Age 17</h4>
+                            <p class="text-orange-400 mt-2">Project: Homework Automation Script</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          ======================================
+          ABOUT US SECTION
+          ======================================
+        -->
+        <section id="about" class="py-20 bg-[#1F2937]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Meet Your Mentor</h2>
+                </div>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12 bg-[#111827] p-8 md:p-12 rounded-xl shadow-lg">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/111827/FFFFFF?text=Rahmatullah+Zisan" alt="Founder Rahmatullah Zisan" class="rounded-full shadow-2xl shadow-cyan-500/30 w-64 h-64 md:w-full md:h-auto mx-auto">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h3 class="text-3xl font-bold text-white">Rahmatullah Zisan</h3>
+                        <p class="text-cyan-400 font-semibold text-lg mb-4">Founder & Lead Instructor</p>
+                        <p class="text-gray-300 mb-4">
+                            "My journey into technology started with a simple spark of curiosity, and it transformed my world. I founded Code Wizards Academy with a powerful belief: every child in Bangladesh deserves the chance to not just use technology, but to become a creator of it. Our mission is to ignite that same spark of passion and show them that with code, they have the power to bring their wildest ideas to life."
+                        </p>
                     </div>
                 </div>
             </div>
@@ -308,64 +284,36 @@
         <section id="contact" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Join the Adventure!</h2>
-                    <p class="text-lg text-gray-600 mt-4">Have questions or ready to enroll? Get in touch!</p>
+                    <h2 class="section-title">Ready to Start Your Coding Adventure?</h2>
                 </div>
-
-                <div class="bg-white rounded-xl shadow-2xl p-8 md:p-12">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <!-- Contact Form -->
-                        <form action="#" method="POST">
-                            <div class="space-y-6">
-                                <div>
-                                    <label for="parent-name" class="block text-sm font-medium text-gray-700">Parent's Name</label>
-                                    <input type="text" name="parent-name" id="parent-name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                    <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                                    <input type="tel" name="phone" id="phone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
-                                </div>
-                                <div>
-                                    <label for="student-age" class="block text-sm font-medium text-gray-700">Student's Age</label>
-                                    <input type="number" name="student-age" id="student-age" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
-                                </div>
-                                <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                                    <textarea name="message" id="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"></textarea>
-                                </div>
-                                <div>
-                                    <button type="submit" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition-transform duration-300 hover:scale-105 shadow-lg">Send Inquiry</button>
-                                </div>
-                            </div>
-                        </form>
-
-                        <!-- Contact Details & Map -->
-                        <div class="space-y-8">
+                <div class="max-w-3xl mx-auto bg-[#1F2937] p-8 rounded-xl shadow-2xl">
+                    <form action="#" method="POST">
+                        <div class="space-y-6">
                             <div>
-                                <h3 class="text-2xl font-bold text-blue-600 mb-4">Our Location</h3>
-                                <div class="space-y-3 text-gray-700">
-                                    <p><i class="fa-solid fa-location-dot text-green-500 w-6"></i> House 123, Road 45, Gulshan 2, Dhaka 1212, Bangladesh</p>
-                                    <p><i class="fa-solid fa-phone text-green-500 w-6"></i> +880 1700-000000</p>
-                                    <p><i class="fa-solid fa-envelope text-green-500 w-6"></i> info@codewizards.bd</p>
-                                </div>
+                                <label for="parent-name" class="form-label">Parent's Name</label>
+                                <input type="text" name="parent-name" id="parent-name" required class="form-input">
                             </div>
-                            <div class="h-80 rounded-lg overflow-hidden shadow-md">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58420.19232223936!2d90.3833837486328!3d23.773123600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77094eace8b%3A0x1cd8c2d9239b6cb7!2sGulshan%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1720146950073!5m2!1sen!2sbd" 
-                                    width="100%" 
-                                    height="100%" 
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
+                            <div>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" required class="form-input">
+                            </div>
+                            <div>
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" name="phone" id="phone" class="form-input">
+                            </div>
+                            <div>
+                                <label for="student-age" class="form-label">Student's Age</label>
+                                <input type="number" name="student-age" id="student-age" required class="form-input">
+                            </div>
+                            <div>
+                                <label for="message" class="form-label">Message</label>
+                                <textarea name="message" id="message" rows="4" class="form-input"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full btn-primary btn-lg">Send Inquiry & Book Trial</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -376,26 +324,58 @@
       FOOTER
       ======================================
     -->
-    <footer class="bg-blue-600 text-white">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-gray-300">&copy; 2025 Zisan's Code Wizards Academy. All Rights Reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-300 hover:text-green-500 transition-colors duration-300 text-2xl"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-green-500 transition-colors duration-300 text-2xl"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-green-500 transition-colors duration-300 text-2xl"><i class="fa-brands fa-github"></i></a>
+    <footer class="bg-[#1F2937] text-gray-400">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Column 1: Academy -->
+                <div class="space-y-4">
+                    <a href="#home" class="flex items-center justify-center md:justify-start space-x-2 text-2xl font-extrabold text-white">
+                        <span class="text-cyan-400 glowing-text">&lt;/&gt;</span>
+                        <span>Code Wizards</span>
+                    </a>
+                    <p class="max-w-sm mx-auto md:mx-0">Inspiring the next generation of tech innovators in Bangladesh.</p>
+                    <div class="flex space-x-6 justify-center md:justify-start">
+                        <a href="#" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
+                <!-- Column 2: Quick Links -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-white text-lg mb-4">Quick Links</h4>
+                    <a href="#home" class="block hover:text-cyan-400 transition-colors">Home</a>
+                    <a href="#courses" class="block hover:text-cyan-400 transition-colors">Courses</a>
+                    <a href="#success" class="block hover:text-cyan-400 transition-colors">Success Stories</a>
+                    <a href="#about" class="block hover:text-cyan-400 transition-colors">About Us</a>
+                </div>
+                <!-- Column 3: Contact -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-white text-lg mb-4">Contact</h4>
+                    <p>House 123, Road 45, Gulshan 2, Dhaka</p>
+                    <p>info@codewizards.bd</p>
+                    <p>+880 1700-000000</p>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm">
+                <p>&copy; 2025 Code Wizards Academy. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center">
+        <div class="relative w-full max-w-4xl">
+            <button id="close-modal-btn" class="absolute -top-8 right-0 text-white text-3xl">&times;</button>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe id="youtube-player" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
-    <!-- 
-      ======================================
-      JAVASCRIPT FOR INTERACTIVITY
-      ======================================
-    -->
-    <script src="script.js"></script>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
 
 </body>
 </html>

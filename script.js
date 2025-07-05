@@ -1,52 +1,73 @@
 document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            const themeToggleButton = document.getElementById('theme-toggle');
-            const htmlElement = document.documentElement;
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-            // Toggle mobile menu
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
 
-            // Close mobile menu when a link is clicked
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-
-            // Smooth scrolling for all anchor links (handled by `scroll-smooth` class in <html>)
-            // This is just a fallback or for more complex scenarios if needed.
-            // The `scroll-smooth` class provides a CSS-only solution.
-            
-            // Optional: Close menu if clicked outside
-            document.addEventListener('click', function(event) {
-                const isClickInsideMenu = mobileMenu.contains(event.target);
-                const isClickOnButton = mobileMenuButton.contains(event.target);
-                if (!isClickInsideMenu && !isClickOnButton) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-
-            // Theme toggling
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                htmlElement.classList.add('dark');
-                themeToggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
-            } else {
-                themeToggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            // Close mobile menu on link click
+            if (mobileMenu.classList.contains('hidden') === false) {
+                mobileMenu.classList.add('hidden');
             }
-
-            themeToggleButton.addEventListener('click', () => {
-                htmlElement.classList.toggle('dark');
-                if (htmlElement.classList.contains('dark')) {
-                    localStorage.setItem('theme', 'dark');
-                    themeToggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                } else {
-                    localStorage.setItem('theme', 'light');
-                    themeToggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
-                }
-            });
         });
+    });
+
+    // Video Modal
+    const videoThumbnail = document.getElementById('video-thumbnail');
+    const watchDemoBtn = document.getElementById('watch-demo-btn');
+    const videoModal = document.getElementById('video-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const youtubePlayer = document.getElementById('youtube-player');
+    const originalVideoSrc = youtubePlayer.src;
+
+    const openModal = () => {
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('flex');
+        youtubePlayer.src = originalVideoSrc + "?autoplay=1"; // Autoplay when modal opens
+    };
+
+    const closeModal = () => {
+        videoModal.classList.add('hidden');
+        videoModal.classList.remove('flex');
+        youtubePlayer.src = originalVideoSrc; // Stop video by resetting src
+    };
+
+    videoThumbnail.addEventListener('click', openModal);
+    watchDemoBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close modal by clicking outside the video
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+            closeModal();
+        }
+    });
+
+    // Animate on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in-up');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .course-card, .success-card, #about > div > div, #contact > div > div').forEach(el => {
+        el.style.opacity = '0'; // Initially hide elements
+        observer.observe(el);
+    });
+});
