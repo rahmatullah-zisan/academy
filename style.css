@@ -27,7 +27,7 @@
         }
 
         .dark .hover\:text-brand-orange:hover {
-            color: #f6ad55;
+            color: #38a169;
         }
 
         .dark .hover\:bg-brand-blue:hover {
@@ -47,7 +47,7 @@
         }
 
         .dark .border-brand-orange {
-            border-color: #f6ad55;
+            border-color: #38a169;
         }
 
         .dark .bg-brand-bg {
@@ -107,12 +107,12 @@
         }
 
         .dark .focus\:ring-brand-orange:focus {
-            --tw-ring-color: #f6ad55;
+            --tw-ring-color: #38a169;
         }
 
         .dark .focus\:border-brand-orange:focus {
-            border-color: #f6ad55;
-        }
+            border-color: #38a169;
+g        }
 
         .dark .bg-brand-blue {
             background-color: #2b6cb0;
