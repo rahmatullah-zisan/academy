@@ -1,0 +1,6 @@
+        /* Additional custom styles if needed */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/E0E7FF/2B3A67?text=Future+Coders+at+Play!');
+            background-size: cover;
+            background-position: center;
+        }
