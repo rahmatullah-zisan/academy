@@ -1,7 +1,9 @@
-        document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            const themeToggleButton = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
 
             // Toggle mobile menu
             mobileMenuButton.addEventListener('click', () => {
@@ -25,6 +27,26 @@
                 const isClickOnButton = mobileMenuButton.contains(event.target);
                 if (!isClickInsideMenu && !isClickOnButton) {
                     mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Theme toggling
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                htmlElement.classList.add('dark');
+                themeToggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            } else {
+                themeToggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+
+            themeToggleButton.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                if (htmlElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeToggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeToggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
                 }
             });
         });

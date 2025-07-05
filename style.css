@@ -1,6 +1,123 @@
-        /* Additional custom styles if needed */
+/* Additional custom styles if needed */
         .hero-bg {
             background-image: url('https://placehold.co/1920x1080/E0E7FF/2B3A67?text=Future+Coders+at+Play!');
             background-size: cover;
             background-position: center;
+        }
+
+        /* Dark mode styles */
+        .dark .bg-brand-bg {
+            background-color: #1a202c;
+        }
+
+        .dark .text-brand-text {
+            color: #edf2f7;
+        }
+
+        .dark .bg-white\/80 {
+            background-color: rgba(26, 32, 44, 0.8);
+        }
+
+        .dark .text-brand-blue {
+            color: #63b3ed;
+        }
+
+        .dark .text-gray-600 {
+            color: #a0aec0;
+        }
+
+        .dark .hover\:text-brand-orange:hover {
+            color: #f6ad55;
+        }
+
+        .dark .hover\:bg-brand-blue:hover {
+            background-color: #2b6cb0;
+        }
+
+        .dark .hover\:text-white:hover {
+            color: #ffffff;
+        }
+
+        .dark .bg-white {
+            background-color: #2d3748;
+        }
+
+        .dark .text-gray-700 {
+            color: #cbd5e0;
+        }
+
+        .dark .border-brand-orange {
+            border-color: #f6ad55;
+        }
+
+        .dark .bg-brand-bg {
+            background-color: #2d3748;
+        }
+
+        .dark .text-cyan-500 {
+            color: #4fd1c5;
+        }
+
+        .dark .text-cyan-600 {
+            color: #38b2ac;
+        }
+
+        .dark .hover\:bg-cyan-600:hover {
+            background-color: #319795;
+        }
+
+        .dark .text-indigo-500 {
+            color: #805ad5;
+        }
+
+        .dark .text-indigo-600 {
+            color: #6b46c1;
+        }
+
+        .dark .hover\:bg-indigo-600:hover {
+            background-color: #553c9a;
+        }
+
+        .dark .bg-green-200 {
+            background-color: #48bb78;
+        }
+
+        .dark .text-green-800 {
+            color: #f0fff4;
+        }
+
+        .dark .bg-blue-200 {
+            background-color: #63b3ed;
+        }
+
+        .dark .text-blue-800 {
+            color: #ebf8ff;
+        }
+
+        .dark .bg-pink-200 {
+            background-color: #f687b3;
+        }
+
+        .dark .text-pink-800 {
+            color: #fff5f7;
+        }
+
+        .dark .border-gray-300 {
+            border-color: #4a5568;
+        }
+
+        .dark .focus\:ring-brand-orange:focus {
+            --tw-ring-color: #f6ad55;
+        }
+
+        .dark .focus\:border-brand-orange:focus {
+            border-color: #f6ad55;
+        }
+
+        .dark .bg-brand-blue {
+            background-color: #2b6cb0;
+        }
+
+        .dark .text-gray-300 {
+            color: #d1d5db;
         }
