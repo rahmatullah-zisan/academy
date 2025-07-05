@@ -1,29 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile Menu Toggle
+
+    // --- Mobile Menu Toggle ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
 
-    // Smooth scrolling for anchor links
+    // --- Smooth Scrolling for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
             // Close mobile menu on link click
-            if (mobileMenu.classList.contains('hidden') === false) {
+            if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
             }
         });
     });
 
-    // Video Modal
+    // --- Video Modal Functionality ---
     const videoThumbnail = document.getElementById('video-thumbnail');
     const watchDemoBtn = document.getElementById('watch-demo-btn');
     const videoModal = document.getElementById('video-modal');
@@ -34,40 +33,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const openModal = () => {
         videoModal.classList.remove('hidden');
         videoModal.classList.add('flex');
-        youtubePlayer.src = originalVideoSrc + "?autoplay=1"; // Autoplay when modal opens
+        youtubePlayer.src = originalVideoSrc.includes('autoplay') ? originalVideoSrc : originalVideoSrc + "&autoplay=1";
     };
 
     const closeModal = () => {
         videoModal.classList.add('hidden');
         videoModal.classList.remove('flex');
-        youtubePlayer.src = originalVideoSrc; // Stop video by resetting src
+        youtubePlayer.src = originalVideoSrc.split("&")[0]; // Stop video
     };
 
-    videoThumbnail.addEventListener('click', openModal);
-    watchDemoBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
-    closeModalBtn.addEventListener('click', closeModal);
+    if (videoThumbnail) videoThumbnail.addEventListener('click', openModal);
+    if (watchDemoBtn) watchDemoBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (videoModal) videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeModal(); });
 
-    // Close modal by clicking outside the video
-    videoModal.addEventListener('click', (e) => {
-        if (e.target === videoModal) {
-            closeModal();
-        }
-    });
-
-    // Animate on scroll
-    const observer = new IntersectionObserver((entries) => {
+    // --- Intersection Observer for Animations ---
+    const animatedElements = document.querySelectorAll('.animate-in');
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in-up');
+                // Add delay if specified
+                const delay = parseInt(entry.target.dataset.animDelay) || 0;
+                setTimeout(() => {
+                    entry.target.classList.add('is-visible');
+                    // Trigger count-up if element is a counter
+                    const countUpElement = entry.target.querySelector('[data-count-up]');
+                    if(countUpElement) {
+                        animateCountUp(countUpElement);
+                    }
+                }, delay);
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.feature-card, .course-card, .success-card, #about > div > div, #contact > div > div').forEach(el => {
-        el.style.opacity = '0'; // Initially hide elements
-        observer.observe(el);
-    });
+    animatedElements.forEach(el => observer.observe(el));
+
+    // --- Count-Up Animation Function ---
+    function animateCountUp(el) {
+        const target = parseInt(el.dataset.countUp, 10);
+        let current = 0;
+        const increment = target / 100; // Adjust for speed
+        const updateCount = () => {
+            current += increment;
+            if (current < target) {
+                el.innerText = Math.ceil(current);
+                requestAnimationFrame(updateCount);
+            } else {
+                el.innerText = target;
+            }
+        };
+        updateCount();
+    }
 });
