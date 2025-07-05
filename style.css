@@ -18,11 +18,11 @@
     }
 
     .btn-primary {
-        @apply bg-cyan-500 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 relative overflow-hidden;
-        box-shadow: 0 0 15px theme('colors.cyan.500'), 0 0 30px theme('colors.cyan.600');
+        @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 relative overflow-hidden;
+        box-shadow: 0 0 15px theme('colors.cyan.500'), 0 0 30px theme('colors.blue.600');
     }
     .btn-primary:hover {
-        box-shadow: 0 0 25px theme('colors.cyan.400'), 0 0 50px theme('colors.cyan.500');
+        box-shadow: 0 0 25px theme('colors.cyan.400'), 0 0 50px theme('colors.blue.500');
     }
 
     .btn-secondary {
